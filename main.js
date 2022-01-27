@@ -6,17 +6,24 @@ function game(rounds) {
 
     for (let round = 1; round <= rounds; round++) {
         function playRound() {
-            const computerSelection = (function() { return playSet[Math.floor(Math.random()*playSet.length)]; })();
-            const playerSelection = (function playerPlay(promptText = 'Your move: ') {
+            const computerSelection = computerPlay(); 
+            const playerSelection = playerPlay();
+
+            console.log(`Round ${round}!`);
+            const result = checkWinner();
+            displayResult();
+            
+            function computerPlay () {
+                return playSet[Math.floor(Math.random()*playSet.length)];
+            }
+
+            function playerPlay(promptText = 'Your move: ') {
                 let playerChoice = prompt(`Round ${round}! ${promptText}`).toLowerCase();
                 if (!playSet.includes(playerChoice)) {
                     playerChoice = playerPlay('Try again: ');
                 }
                 return playerChoice;
-            })();
-            console.log(`Round ${round}!`);
-            let result = checkWinner();
-            displayResult();
+            }
 
             function checkWinner() {
                 let winner = '';
