@@ -20,8 +20,8 @@ function playRound(event) {
     const computerSelection = computerPlay(); 
     const playerSelection = this.id; 
     const result = checkWinner();
-    round++; 
     displayResult();
+    round++; 
 
 
     function computerPlay () {
@@ -68,7 +68,7 @@ function resetGame() {
     playerWins = 0;
     round = 1;
     results.textContent = '';
-    roundBox.textContent = 'Round 1';
+    roundBox.textContent = '';
     computerScore.textContent = computerWins;
     playerScore.textContent = playerWins;
 }
