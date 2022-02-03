@@ -49,25 +49,37 @@ h1 {
     font-weight: bold;
     color: #5085F6;
     padding: 0 25px;
-    background-color: #fff;
-    border: 8px solid #5085F6;
-    border-radius: 25px;
 
     max-width: 80vw;
 }
 h2 {
     font-size: 3em;
 }
-
+.winBox {
+    display: none;
+    width: 80%;
+    height: 200px;
+    font-size: 1.7em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff;
+    border: 8px solid #5085F6;
+    border-radius: 25px;
+    -webkit-filter: drop-shadow( 4px 8px 8px hsl(0deg 0% 0% / 0.38));
+    filter: drop-shadow( 4px 8px 8px hsl(0deg 0% 0% / 0.38));
+}
 .bannerBox {
     -webkit-filter: drop-shadow( 4px 8px 8px hsl(0deg 0% 0% / 0.38));
     filter: drop-shadow( 4px 8px 8px hsl(0deg 0% 0% / 0.38));
     margin-top: 10vh;
+    background-color: #fff;
+    border: 8px solid #5085F6;
+    border-radius: 25px;
 }
 
-
 .gameBox {
-    z-index: 0;
+    width: 90%;
     margin-top: 10px;
     display: flex;
     flex-direction: column;

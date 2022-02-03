@@ -1,12 +1,15 @@
 const playSet = ['rock', 'paper', 'scissors'];
 const imgButtons = document.querySelectorAll('.imgButton');
 const resetHeader = document.querySelector('.bannerBox');
+const winBox = document.querySelector('.winBox');
+const buttonBox = document.querySelector('.buttonBox');
+const winner = document.querySelector('#winner');
 
 imgButtons.forEach((button) => {
     button.addEventListener('click', playRound);
 });
 resetHeader.addEventListener('click', resetGame);
-
+winBox.addEventListener('click', resetGame);
 let playerWins = 0;
 let computerWins = 0;
 let round = 1;
@@ -61,15 +64,27 @@ function playRound(event) {
             results.textContent = `Computer wins - ${computerSelection} 
                     beats ${playerSelection}.`; 
         }
+
+        if (playerWins == 5 || computerWins == 5) {
+            if (playerWins == 5) {
+                winner.textContent = 'YOU WIN!';
+            } else {
+                winner.textContent = 'COMPUTER WINS!';
+            }
+            buttonBox.style.display = "none";
+            winBox.style.display = "flex";
+        }
     }
 }
 function resetGame() {
     computerWins = 0;
     playerWins = 0;
     round = 1;
-    results.textContent = '';
+    results.textContent = 'FIRST TO 5 WINS!';
     roundBox.textContent = '';
     computerScore.textContent = computerWins;
     playerScore.textContent = playerWins;
+    winBox.style.display = "none";
+    buttonBox.style.display = "flex";
 }
 
