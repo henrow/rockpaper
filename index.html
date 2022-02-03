@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <title>rock paper scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+    </style>
 </head>
 <body>
     <div class="gameBox">
+        <h1>ROCK PAPER SCISSORS</h1>
         <div class="buttonBox">
-            <button id="rock">rock</button>
-            <button id="paper">paper</button>
-            <button id="scissors">scissors</button>
+            <div class="imgBox">
+                <img src ="images/rock.svg" class="imgButton" id="rock"/>
+                <div class="imgDesc">ROCK</div>
+            </div>
+            <div class="imgBox">
+                <img src ="images/paper.svg" class="imgButton" id="paper"/>
+                <div class="imgDesc">PAPER</div>
+            </div>
+            <div class="imgBox">
+                <img src ="images/scissors.svg" class="imgButton" id="scissors"/>
+                <div class="imgDesc">SCISSORS</div>
+            </div>
         </div>
         
         <div class="resultsBox">
-            <div id="results">  </div>
             <div class="scoreBox">
                 <p>Computer Score: <span id="computerScore">0</span></p>
                 <p>Player Score: <span id="playerScore">0</span></p>
             </div>
+            <div id="results">  </div>
         </div>
     </div>
 

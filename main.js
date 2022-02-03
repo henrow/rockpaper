@@ -1,7 +1,7 @@
 const playSet = ['rock', 'paper', 'scissors'];
-const buttons = document.querySelectorAll('button');
+const imgButtons = document.querySelectorAll('.imgButton');
 
-buttons.forEach((button) => {
+imgButtons.forEach((button) => {
     button.addEventListener('click', playRound);
 });
 
