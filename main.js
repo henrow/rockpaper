@@ -1,12 +1,11 @@
 const playSet = ['rock', 'paper', 'scissors'];
 const imgButtons = document.querySelectorAll('.imgButton');
-const button = document.querySelector('button');
+const resetHeader = document.querySelector('.bannerBox');
 
 imgButtons.forEach((button) => {
     button.addEventListener('click', playRound);
 });
-
-button.addEventListener('click', resetGame);
+resetHeader.addEventListener('click', resetGame);
 
 let playerWins = 0;
 let computerWins = 0;
